@@ -1,4 +1,7 @@
-% Name : Gerardas
-% Surname : Kavaliauskas
-% Group : EDIfu25/2
-% Date : 2026-09-14
+x = 1:32;
+y = x.^2;
+
+plot(x,y,'o-r', x,y, 'xb')
+title('Dvi Funkcijos')
+xlabel('X-ai')
+ylabel('F_1 [-o-]    |   F_2 [-x-]')
