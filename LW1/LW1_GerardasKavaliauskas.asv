@@ -1,4 +1,4 @@
-%% Main Task
+%% Main Tas
 x = 1:32;
 y = x.^2;
 
@@ -17,14 +17,14 @@ A = [N,     N+1,   N+2; ...
     N+3,   N+4,   N+5; ...
     N+6,   N+7,   N+8];
 
-% matrix element extraction
-a = A(3, 2);               % Extract single element at (3,2) -> N + 7
-b = A(2:3, 1:2);           % Extract 2x2 bottom-left block
-c = A([1, 3], [1, 3]);   % Extract 2x2 matrix of the four corners)
+% 4. matrix element extraction
+a = A(1, :);       % first row
+b = A(:, 2);       % second column
+c = A(2:3, 2:3);   % 2x2 submatrix (bottom-right)
 
-% concatenate Matrix A with Vector
+% 5. Concatenate Matrix A with Vector
 % Vector needs 3 
-vec_sub = vec(1:3);
+vec_sub = vec(1:3); % Take first 3 elements of vec
 
 % column-wise concatenation (adds as 4th column):
 A_concatenated_col = [A, vec_sub']; 
