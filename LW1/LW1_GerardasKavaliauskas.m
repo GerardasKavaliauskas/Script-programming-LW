@@ -3,31 +3,32 @@ x = 1:32;
 y = x.^2;
 
 plot(x,y,'o-r', x,y, 'xb')
-title('Dvi Funkcijos')
+title('Two Functions')
 xlabel('X-ai')
 ylabel('F_1 [-o-]    |   F_2 [-x-]')
 
 %% complementary task
 
+% variant
 N = 5; 
 
 vec = (N + 1) : 0.5 : (N + 4);
 % matrix
-A = [N,     N+1,   N+2; ...
-    N+3,   N+4,   N+5; ...
+A = [N,     N+1,   N+2
+    N+3,   N+4,   N+5
     N+6,   N+7,   N+8];
 
 % matrix element extraction
-a = A(3, 2);               % Extract single element at (3,2) -> N + 7
-b = A(2:3, 1:2);           % Extract 2x2 bottom-left block
-c = A([1, 3], [1, 3]);   % Extract 2x2 matrix of the four corners)
+a = A(3, 2);               % extract single element at (3,2) -> N + 7
+b = A(3:3, 1:2);           % extract 2x2 bottom-left block
+c = A([1, 3], [1, 3]);   % extract 2x2 matrix of the four corners)
 
 % concatenate Matrix A with Vector
-% Vector needs 3 
+% vector needs 3 
 vec_sub = vec(1:3);
 
 % column-wise concatenation (adds as 4th column):
-A_concatenated_col = [A, vec_sub']; 
+A_concatenated_col = [A, vec_sub';]; 
 
 % row-wise concatenation (adds as 4th row):
-A_concatenated_row = [A; vec_sub];
+A_concatenated_row = [A; vec_sub'];
